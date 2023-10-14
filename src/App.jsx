@@ -22,6 +22,7 @@ function App() {
       thisMonth: 691,
       icon: LuBadgeDollarSign,
       color: "green",
+      heading:"month"
     },
     {
       name: "orders",
@@ -29,6 +30,7 @@ function App() {
       thisMonth: 350,
       icon: CiViewList,
       color: "purple",
+      heading:"month"
     },
     {
       name: "balance",
@@ -36,6 +38,7 @@ function App() {
       thisMonth: 38,
       icon: GiWallet,
       color: "blue",
+      heading:"month"
     },
     {
       name: "total sales",
@@ -43,16 +46,17 @@ function App() {
       thisMonth: 450,
       icon: FaShoppingBag,
       color: "pink",
+      heading:"week"
     },
   ];
   return (
     <>
       <div className="flex flex-row">
-        <div className="w-[20%] bg-[#040440] ">
+        <div className="w-[22%] bg-[#040440] ">
           <Sidebar />
         </div>
 
-        <div id="container" className="md:w-[80%] mx-10">
+        <div id="container" className="md:w-[78%] mx-10">
           <div className="w-full">
             <Header />
           </div>
@@ -60,9 +64,15 @@ function App() {
           <div className="w-full">
             <Card cardsData={cardsData} />
           </div>
-          <div className="flex gap-10 flex-col w-full md:flex-row  h-fit my-10">
+          <div className="flex gap-10 flex-col w-full md:flex-row  my-10 overflow-hidden">
+            <div className="w-[70%]">
+
             <ColumnChart data={BarData} />
+            </div>
+            <div className="w-[30%] relative">
+
             <PiChart series={PiData} />
+            </div>
           </div>
           <div className="w-full">
             <Tabel/>

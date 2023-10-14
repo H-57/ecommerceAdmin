@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import { RiSettingsLine,RiMoneyDollarBoxLine } from "react-icons/ri";
 import { TbSquareKey,TbDiscount2 } from "react-icons/tb";
-import { FaGreaterThan } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
 import { AiFillCodeSandboxSquare } from "react-icons/ai";
 import { BsPersonSquare } from "react-icons/bs";
 import {MdOutlineLiveHelp} from 'react-icons/md';
@@ -36,40 +36,40 @@ function Sidebar() {
     SetList(SidebarList);
   }, []);
   return (
-    <div className="text-white h-[100vh] relative">
-      <div className="font-semibold text-3xl w-fit m-auto font-serif ">
+    <div className="text-white h-[100vh] fixed ">
+      <div className="font-semibold text-xl w-fit m-auto font-serif ">
         <RiSettingsLine className="inline mr-2" />
         Dashboard
       </div>
-      <ul className="flex flex-col mx-5 mt-10 gap-3">
+      <ul className="flex flex-col mx-5 mt-10 gap-3 w-full">
         {list?.map((elm, index) => (
           <li
             key={index}
             onClick={()=>handleItemClick(index)
                }
-            className={`hover:bg-[#2d2d69] hover:text-white cursor-pointer text-xl capitalize ${
+            className={`hover:bg-[#2d2d69] hover:text-white cursor-pointer text-sm font-semibold w-full capitalize ${
               elm.IsChecked ? "bg-[#2d2d69] text-white" : "text-gray-400"
             } py-2 rounded-md `}
           >
-            {<elm.icon className="rounded-md text-2xl inline mx-3" />}
+            {<elm.icon className="rounded-md text-xl inline mx-3" />}
             {elm.name}
             {elm.list && (
-              <span className=" float-right text-sm mr-3">
-                <FaGreaterThan className="inline" />
+              <span className=" float-right text-xs mr-1">
+                <IoIosArrowForward className="inline" />
               </span>
             )}
           </li>
         ))}
       </ul>
-<div className="flex absolute bg-[#2d2d69] min-w-[90%] left-3 bottom-10 rounded-md p-2 ">
+<div className="flex fixed bg-[#2d2d69]  bottom-5 rounded-md p-2 ml-2 ">
 <img className="w-10 h-10 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="Rounded avatar"/>
 <div className="mx-3">
 
-<h3>Evano</h3><span className=" capitalize block text-gray-400">project manager</span>
+<h3 className="font-semibold">Evano</h3><span className=" capitalize block text-gray-400 text-sm">project manager</span>
 </div>
 <div className="w-fit h-fit m-auto text-gray-400 float-right rotate-90">
 
-<FaGreaterThan />
+<IoIosArrowForward />
 </div>
 </div>
     </div>

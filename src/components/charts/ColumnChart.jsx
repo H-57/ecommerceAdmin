@@ -26,7 +26,7 @@ function ColumnChart({data}) {
       toolbar: {
         show: false,
       },
-      height: 350,
+      height: 250,
       type: "bar",
     },
     plotOptions: {
@@ -80,10 +80,10 @@ function ColumnChart({data}) {
 
   return (
     <>
-      <div className=" relative w-full md:w-[70%] bg-white rounded-md" id="chart">
+      <div className=" relative w-full  bg-white rounded-md  " id="chart">
         <h3 className="mx-5 mt-5 font-mono font-semibold text-xl">Overview</h3>
         <p className="mx-5 capitalize  font-semibold text-gray-400 ">monthly earning</p>
-      <select className="absolute right-5 z-[4] text-gray-400 rounded-md top-5 bg-gray-100 " name="Option" >
+      <select className="absolute right-5 z-[4] outline-none text-gray-400 rounded-md top-5 bg-gray-100 " name="Option" >
     <option value="Quartely">Quartely</option>
     <option value="Weekly">Weekly</option>
     <option value="Monthly">Monthly</option>
@@ -93,7 +93,7 @@ function ColumnChart({data}) {
           options={options}
           series={series}
           type="bar"
-          height={350}
+          height={300}
         />
       </div>
     </>
