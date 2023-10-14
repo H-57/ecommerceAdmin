@@ -36,7 +36,7 @@ function Sidebar() {
     SetList(SidebarList);
   }, []);
   return (
-    <div className="text-white h-[100vh] fixed ">
+    <div className="text-white h-[100vh] fixed w-[18%] ">
       <div className="font-semibold text-xl w-fit m-auto font-serif ">
         <RiSettingsLine className="inline mr-2" />
         Dashboard
@@ -61,7 +61,7 @@ function Sidebar() {
           </li>
         ))}
       </ul>
-<div className="flex fixed bg-[#2d2d69]  bottom-5 rounded-md p-2 ml-2 ">
+<div className="flex fixed bg-[#2d2d69]  bottom-5 rounded-md p-2 ml-2  w-[18%]">
 <img className="w-10 h-10 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="Rounded avatar"/>
 <div className="mx-3">
 
