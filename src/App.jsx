@@ -2,7 +2,7 @@ import "./App.css";
 import Card from "./components/Card";
 import ColumnChart from "./components/charts/ColumnChart";
 import PiChart from "./components/charts/PiChart";
-import Sidebar from "./components/sidebar";
+import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 
 // icons imports
