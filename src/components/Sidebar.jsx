@@ -7,7 +7,7 @@ import { AiFillCodeSandboxSquare } from "react-icons/ai";
 import { BsPersonSquare } from "react-icons/bs";
 import {MdOutlineLiveHelp} from 'react-icons/md';
 
-function sidebar() {
+function Sidebar() {
   const [list, SetList] = useState();
   const SidebarList = [
     { name: "Dashboard", IsChecked: true, icon: TbSquareKey, list: false },
@@ -76,4 +76,4 @@ function sidebar() {
   );
 }
 
-export default sidebar;
+export default Sidebar;
