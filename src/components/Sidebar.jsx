@@ -23,6 +23,8 @@ function Sidebar() {
     { name: "help", IsChecked: false, icon: MdOutlineLiveHelp, list: true },
   ];
   const handleItemClick = (index) => {
+
+
     const updatedList = list.map((item, i) => {
       if (i === index) {
         return { ...item, IsChecked: !item.IsChecked };
@@ -36,12 +38,12 @@ function Sidebar() {
     SetList(SidebarList);
   }, []);
   return (
-    <div className="text-white h-[100vh] fixed w-[18%] ">
+    <div className=" fixed z-10 text-white h-[100vh] w-full md:fixed md:w-[22%] md:pr-10 bg-[#040440] ">
       <div className="font-semibold text-xl w-fit m-auto font-serif ">
         <RiSettingsLine className="inline mr-2" />
         Dashboard
       </div>
-      <ul className="flex flex-col mx-5 mt-10 gap-3 w-full">
+      <ul className="flex flex-col mx-5 mt-10 gap-3 w-full pr-10 md:pr-0">
         {list?.map((elm, index) => (
           <li
             key={index}
@@ -61,7 +63,7 @@ function Sidebar() {
           </li>
         ))}
       </ul>
-<div className="flex fixed bg-[#2d2d69]  bottom-5 rounded-md p-2 ml-2  w-[18%]">
+<div className="flex fixed bg-[#2d2d69]  bottom-5 rounded-md p-2 ml-2 w-full md:w-[18%]">
 <img className="w-10 h-10 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="Rounded avatar"/>
 <div className="mx-3">
 

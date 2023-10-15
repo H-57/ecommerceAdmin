@@ -5,8 +5,8 @@ function Tabel() {
   return (
     <div className="my-10 bg-white rounded-md">
       {/* header of tabel top */}
-      <div className="p-10">
-      <p className=" font-semibold text-xl w-fit inline ">Product Sell</p>
+      <div className="md:p-10">
+      <p className=" font-semibold text-sm md:text-xl w-fit inline ">Product Sell</p>
 
       <select
         className=" text-sm text-gray-400 rounded-md  bg-gray-100 float-right p-2 ml-3"
@@ -14,9 +14,9 @@ function Tabel() {
       >
         <option value="Quartely">Last 30 days</option>
       </select>
-      <div className="relative w-fit float-right bg-gray-100 rounded-md p-1 text-gray-400">
-        <AiOutlineSearch className="inline text-2xl" />
-        <input type="text" placeholder="search" className=" bg-gray-100  outline-none" />
+      <div className="relative  float-right bg-gray-100 rounded-md p-1 text-gray-400">
+        <AiOutlineSearch className="inline  md:text-2xl" />
+        <input type="text" placeholder="search" className=" bg-gray-100  outline-none w-[60px] md:w-auto" />
       </div>
       </div>
 

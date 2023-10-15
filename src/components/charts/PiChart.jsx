@@ -50,9 +50,9 @@ colors:["#f71485","#5b33e8"],
         </p>
        
         
-           <div className="absolute w-20 top-[40%] left-[40%]">
-            <h3 className="font-semibold text-center text-xl">65%</h3>
-            <span className=" capitalize block text-[12px]">total new customers</span>
+           <div className="absolute w-20 top-[42%] md:top-[40%] left-[42%] md:left-[40%]">
+            <h3 className="font-semibold text-center  md:text-xl">65%</h3>
+            <span className=" capitalize block text-[10px] md:text-[12px]">total new customers</span>
           </div> 
        
 
@@ -60,7 +60,7 @@ colors:["#f71485","#5b33e8"],
           options={options}
           series={series}
           type="donut"
-          className=" w-[80%]  absolute bottom-[30%] left-[10%] "
+          className=" w-fit md:w-[80%] m-auto md:absolute md:bottom-[30%] md:left-[10%] "
         />
       </div>
     </>

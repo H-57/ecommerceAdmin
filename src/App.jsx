@@ -1,18 +1,22 @@
 import "./App.css";
+import { useState } from "react";
 import Card from "./components/Card";
 import ColumnChart from "./components/charts/ColumnChart";
 import PiChart from "./components/charts/PiChart";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
+import Tabel from "./components/Tabel";
 
 // icons imports
 import { LuBadgeDollarSign } from "react-icons/lu";
 import { CiViewList } from "react-icons/ci";
 import { GiWallet } from "react-icons/gi";
 import { FaShoppingBag } from "react-icons/fa";
-import Tabel from "./components/Tabel";
+import{MdOutlineSegment}from "react-icons/md";
+import {RxCross1}from "react-icons/rx"
 
 function App() {
+  const [Nav, setNav] = useState(false)
   const PiData = [15, 50];
   const BarData = [9.3, 3.1, 4.0, 10.1, 8.0, 3.6, 5.2, 2.3, 1.4, 4.8, 3.5, 6.2];
   const cardsData = [
@@ -51,12 +55,19 @@ function App() {
   ];
   return (
     <>
-      <div className="flex flex-row">
-        <div className="w-[22%] bg-[#040440] ">
+    <div className="md:hidden text-white text-xl mb-4 fixed z-50 top-0 bg-[#040440] mb-10 h-10 w-full rounded-md" onClick={()=>setNav(!Nav)}>
+    Dashboard
+   
+          {Nav?<RxCross1 className="text-xl text-white float-right m-3"/>:<MdOutlineSegment className="text-xl text-white float-right m-3"/>}
+        </div>
+      <div className="flex flex-row overflow-hidden">
+       
+        <div className={` w-full ${Nav?"block":"hidden"}   md:block md:w-[22%]`}   >
           <Sidebar />
         </div>
 
-        <div id="container" className="md:w-[78%] mx-10">
+        <div id="container" className="w-full md:w-[78%] mx-3 md:mx-10">
+        
           <div className="w-full">
             <Header />
           </div>
@@ -65,11 +76,11 @@ function App() {
             <Card cardsData={cardsData} />
           </div>
           <div className="flex gap-10 flex-col w-full md:flex-row  my-10 overflow-hidden">
-            <div className="w-[70%]">
+            <div className="w-full md:w-[70%]">
 
             <ColumnChart data={BarData} />
             </div>
-            <div className="w-[30%] relative">
+            <div className="w-full md:w-[30%] relative">
 
             <PiChart series={PiData} />
             </div>
