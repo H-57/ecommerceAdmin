@@ -55,7 +55,7 @@ function App() {
   ];
   return (
     <>
-    <div className="md:hidden text-white text-xl mb-4 fixed z-50 top-0 bg-[#040440] mb-10 h-10 w-full rounded-md" onClick={()=>setNav(!Nav)}>
+    <div className="md:hidden text-white text-xl  fixed z-50 top-0 bg-[#040440] mb-10 h-10 w-full rounded-md" onClick={()=>setNav(!Nav)}>
     Dashboard
    
           {Nav?<RxCross1 className="text-xl text-white float-right m-3"/>:<MdOutlineSegment className="text-xl text-white float-right m-3"/>}
