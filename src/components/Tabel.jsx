@@ -5,7 +5,7 @@ function Tabel() {
   return (
     <div className="my-10 bg-white rounded-md">
       {/* header of tabel top */}
-      <div className="md:p-10">
+      <div className="p-3 md:p-10">
       <p className=" font-semibold text-sm md:text-xl w-fit inline ">Product Sell</p>
 
       <select
